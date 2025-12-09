@@ -13,7 +13,7 @@ const ProjectDetailDynamic = () => {
   useEffect(() => {
     setLoading(true);
     setError(null);
-    fetch(`https://asus-instances-coal-indication.trycloudflare.com/projects/${projectId}`)
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/projects/${projectId}`)
       .then((res) => {
         if (!res.ok) throw new Error("Project not found");
         return res.json();

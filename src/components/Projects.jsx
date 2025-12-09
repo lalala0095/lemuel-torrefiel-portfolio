@@ -9,7 +9,7 @@ const Projects = () => {
   useEffect(() => {
     setLoading(true);
     setError(null);
-    fetch("https://asus-instances-coal-indication.trycloudflare.com/projects")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/projects`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch projects");
         return res.json();
