@@ -1,0 +1,19 @@
+# This file specifies files that should NOT be uploaded to Google Cloud
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+.venv
+.git
+.gitignore
+*.egg-info/
+dist/
+build/
+.DS_Store
+.pytest_cache/
+.coverage
+htmlcov/
