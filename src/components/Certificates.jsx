@@ -50,12 +50,18 @@ const certificates = [
 
 const Certificates = () => {
 	return (
-		<section id="certificates" className="py-16 bg-gray-50">
-			<div className="max-w-6xl mx-auto px-6 text-center">
-				<h2 className="text-4xl font-extrabold text-gray-900 mb-8">
+		<section id="certificates" className="py-20 relative overflow-hidden" style={{
+			background: 'linear-gradient(180deg, #1a1a3e 0%, #0f172a 50%, #1e1b4b 100%)',
+		}}>
+			{/* Background glow */}
+			<div className="absolute top-1/4 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+			<div className="absolute bottom-1/4 left-0 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
+
+			<div className="max-w-6xl mx-auto px-6 text-center relative z-10">
+				<h2 className="text-4xl font-extrabold text-white mb-4">
 					My Certificates
 				</h2>
-				<p className="text-lg text-gray-700 mb-12">
+				<p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
 					Here are some of my professional certifications in Data Analytics and
 					Engineering.
 				</p>
@@ -65,7 +71,7 @@ const Certificates = () => {
 					{certificates.map((cert, index) => (
 						<div
 							key={index}
-							className="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105"
+							className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:border-white/20 hover:shadow-xl hover:shadow-purple-500/10 group"
 						>
 							{/* Certificate Image or Placeholder */}
 							{cert.image ? (
@@ -75,14 +81,14 @@ const Certificates = () => {
 									className="w-full h-48 object-cover"
 								/>
 							) : (
-								<div className="flex items-center justify-center h-48 bg-gray-200">
-									<FileText className="w-16 h-16 text-gray-500" />
+								<div className="flex items-center justify-center h-48 bg-gradient-to-br from-purple-500/20 to-cyan-500/20">
+									<FileText className="w-16 h-16 text-gray-400 group-hover:text-white transition-colors duration-300" />
 								</div>
 							)}
 
 							{/* Certificate Details */}
 							<div className="p-6 text-center">
-								<h3 className="text-lg font-semibold text-gray-800">
+								<h3 className="text-lg font-semibold text-white group-hover:text-purple-300 transition-colors duration-300">
 									{cert.title}
 								</h3>
 								<div className="mt-4 flex justify-center space-x-4">
@@ -91,7 +97,7 @@ const Certificates = () => {
 										href={`/certificates/${cert.file}`}
 										target="_blank"
 										rel="noopener noreferrer"
-										className="flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition"
+										className="flex items-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg shadow hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
 									>
 										<Eye className="w-4 h-4 mr-2" />
 										View
@@ -101,7 +107,7 @@ const Certificates = () => {
 									<a
 										href={`/certificates/${cert.file}`}
 										download={cert.file}
-										className="flex items-center px-4 py-2 text-sm font-medium text-white bg-gray-700 rounded-lg shadow hover:bg-gray-800 transition"
+										className="flex items-center px-4 py-2 text-sm font-medium text-white bg-white/10 border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-300"
 									>
 										<Download className="w-4 h-4 mr-2" />
 										Download
