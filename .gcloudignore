@@ -1,0 +1,11 @@
+.git
+.gitignore
+node_modules
+dist
+# Dockerfile <-- REMOVED this because we want to use the Dockerfile for the build
+README.md
+
+# Ignore common clutter
+.vscode
+.DS_Store
+*.log
