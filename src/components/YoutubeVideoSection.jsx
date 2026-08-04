@@ -12,7 +12,7 @@ const YouTubeSection = () => {
       <div className="max-w-4xl relative z-10">
         <h2 className="text-4xl font-bold mb-8 text-white">My Video Introduction</h2>
         <div className="rounded-xl overflow-hidden shadow-2xl shadow-purple-500/20 border border-white/10">
-          <YouTubeVideo videoId="NRGLWR3Lz48" />
+          <YouTubeVideo videoId="ZaZvA1BBPlk" />
         </div>
       </div>
     </section>
